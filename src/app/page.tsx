@@ -50,7 +50,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
             <div className="relative">
               <dt className="text-lg font-semibold leading-7 text-gray-900 dark:text-white">
-                Simple & Elegant
+                Simple &amp; Elegant
               </dt>
               <dd className="mt-2 text-base text-gray-600 dark:text-gray-300">
                 Clean, minimalist interface that shows you exactly what you need
@@ -99,25 +99,25 @@ export default function Home() {
                 target="_blank"
                 className="underline decoration-dotted"
               >
-                Nat Friedman's homepage
+                Nat Friedman&apos;s homepage
               </Link>{" "}
               about 5 months ago and read a really obvious yet astonishing
               statement:
               <span className="font-semibold text-gray-900 dark:text-white">
                 {" "}
-                "A week is 2% of the year"
+                &ldquo;A week is 2% of the year&rdquo;
               </span>
               .
             </p>
             <p>
-              Everyone knows that time is precious. But it's really not that
-              tangible when you're stuck in the absolute scale of a clock.
+              Everyone knows that time is precious. But it&apos;s really not that
+              tangible when you&apos;re stuck in the absolute scale of a clock.
               Instead, using relative scales is far more effective for humans,
               at least that is what I propose.
             </p>
             <p>
-              I really fell in love with Nat's concept of "a week is 2% of the
-              year" and have been adopting this to measure my life.
+              I really fell in love with Nat&apos;s concept of &ldquo;a week is 2% of the
+              year&rdquo; and have been adopting this to measure my life.
             </p>
           </div>
 
@@ -126,13 +126,13 @@ export default function Home() {
           </h3>
           <div className="space-y-8 text-base leading-7 text-gray-600 dark:text-gray-300">
             <p>
-              You might wonder, 'Why not use existing apps in the market?'
+              You might wonder, &lsquo;Why not use existing apps in the market?&rsquo;
               However, my research suggested that many existing applications
               charge excessively for minimal utility.
             </p>
             <p>
               So, that is why I decided to build it myself and turns out it was
-              the right choice. Most of all, it's free!
+              the right choice. Most of all, it&apos;s free!
             </p>
           </div>
 
