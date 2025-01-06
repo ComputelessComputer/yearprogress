@@ -1,101 +1,156 @@
+import { DownloadButton } from "@/components/DownloadButton";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <main className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        {/* Hero Section */}
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+            Year Progress App
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+            Track the passage of time with elegant progress bars right from your
+            menu bar
+          </p>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/assets/year.jpg"
+              alt="Year Progress"
+              width={400}
+              height={300}
+              className="mx-auto rounded-lg shadow-lg dark:shadow-gray-700/30 w-full"
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <Image
+              src="/assets/month.jpg"
+              alt="Month Progress"
+              width={400}
+              height={300}
+              className="mx-auto rounded-lg shadow-lg dark:shadow-gray-700/30 w-full"
+              priority
+            />
+            <Image
+              src="/assets/day.jpg"
+              alt="Day Progress"
+              width={400}
+              height={300}
+              className="mx-auto rounded-lg shadow-lg dark:shadow-gray-700/30 w-full"
+              priority
+            />
+          </div>
+
+          <DownloadButton className="mt-16" />
         </div>
+
+        {/* Features Section */}
+        <div className="mt-24">
+          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
+            <div className="relative">
+              <dt className="text-lg font-semibold leading-7 text-gray-900 dark:text-white">
+                Simple & Elegant
+              </dt>
+              <dd className="mt-2 text-base text-gray-600 dark:text-gray-300">
+                Clean, minimalist interface that shows you exactly what you need
+                to know at a glance.
+              </dd>
+            </div>
+            <div className="relative">
+              <dt className="text-lg font-semibold leading-7 text-gray-900 dark:text-white">
+                Multiple Time Scales
+              </dt>
+              <dd className="mt-2 text-base text-gray-600 dark:text-gray-300">
+                Track progress for the year, month, and day all in one place.
+              </dd>
+            </div>
+            <div className="relative">
+              <dt className="text-lg font-semibold leading-7 text-gray-900 dark:text-white">
+                Menu Bar Integration
+              </dt>
+              <dd className="mt-2 text-base text-gray-600 dark:text-gray-300">
+                Always accessible from your menu bar, with keyboard shortcuts
+                for quick access.
+              </dd>
+            </div>
+            <div className="relative">
+              <dt className="text-lg font-semibold leading-7 text-gray-900 dark:text-white">
+                Native macOS App
+              </dt>
+              <dd className="mt-2 text-base text-gray-600 dark:text-gray-300">
+                Built specifically for macOS, following platform design
+                guidelines and best practices.
+              </dd>
+            </div>
+          </div>
+        </div>
+
+        {/* Background Section */}
+        <div className="mx-auto max-w-2xl mt-24">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl text-center">
+            Background
+          </h2>
+          <div className="mt-10 space-y-8 text-base leading-7 text-gray-600 dark:text-gray-300">
+            <p>
+              I was looking into{" "}
+              <Link
+                href="https://nat.org"
+                target="_blank"
+                className="underline decoration-dotted"
+              >
+                Nat Friedman's homepage
+              </Link>{" "}
+              about 5 months ago and read a really obvious yet astonishing
+              statement:
+              <span className="font-semibold text-gray-900 dark:text-white">
+                {" "}
+                "A week is 2% of the year"
+              </span>
+              .
+            </p>
+            <p>
+              Everyone knows that time is precious. But it's really not that
+              tangible when you're stuck in the absolute scale of a clock.
+              Instead, using relative scales is far more effective for humans,
+              at least that is what I propose.
+            </p>
+            <p>
+              I really fell in love with Nat's concept of "a week is 2% of the
+              year" and have been adopting this to measure my life.
+            </p>
+          </div>
+
+          <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-16 mb-6">
+            Why use this?
+          </h3>
+          <div className="space-y-8 text-base leading-7 text-gray-600 dark:text-gray-300">
+            <p>
+              You might wonder, 'Why not use existing apps in the market?'
+              However, my research suggested that many existing applications
+              charge excessively for minimal utility.
+            </p>
+            <p>
+              So, that is why I decided to build it myself and turns out it was
+              the right choice. Most of all, it's free!
+            </p>
+          </div>
+
+          <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-16 mb-6">
+            Why is it free?
+          </h3>
+          <p className="text-base leading-7 text-gray-600 dark:text-gray-300">
+            I initially considered pricing it, but given my involvement in other
+            businesses, I preferred not to deal with the hassle. Moreover, I
+            wanted to contribute to enhancing productivity freely.
+          </p>
+        </div>
+
+        {/* Footer */}
+        <footer className="mt-24 pb-12 text-center text-sm text-gray-500 dark:text-gray-400">
+          &copy; {new Date().getFullYear()} Year Progress App. All rights reserved.
+        </footer>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
