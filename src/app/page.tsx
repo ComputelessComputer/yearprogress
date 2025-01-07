@@ -15,32 +15,14 @@ export default function Home() {
             Track the passage of time with elegant progress bars right from your
             menu bar
           </p>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Image
-              src="/assets/year.jpg"
-              alt="Year Progress"
-              width={400}
-              height={300}
-              className="mx-auto rounded-lg shadow-lg dark:shadow-gray-700/30 w-full"
-              priority
-            />
-            <Image
-              src="/assets/month.jpg"
-              alt="Month Progress"
-              width={400}
-              height={300}
-              className="mx-auto rounded-lg shadow-lg dark:shadow-gray-700/30 w-full"
-              priority
-            />
-            <Image
-              src="/assets/day.jpg"
-              alt="Day Progress"
-              width={400}
-              height={300}
-              className="mx-auto rounded-lg shadow-lg dark:shadow-gray-700/30 w-full"
-              priority
-            />
-          </div>
+          <Image
+            src="/assets/year.jpg"
+            alt="Year Progress"
+            width={570}
+            height={420}
+            className="mx-auto rounded-lg shadow-lg dark:shadow-gray-700/30 w-full"
+            priority
+          />
 
           <DownloadButton className="mt-16" />
         </div>
@@ -110,14 +92,15 @@ export default function Home() {
               .
             </p>
             <p>
-              Everyone knows that time is precious. But it&apos;s really not that
-              tangible when you&apos;re stuck in the absolute scale of a clock.
-              Instead, using relative scales is far more effective for humans,
-              at least that is what I propose.
+              Everyone knows that time is precious. But it&apos;s really not
+              that tangible when you&apos;re stuck in the absolute scale of a
+              clock. Instead, using relative scales is far more effective for
+              humans, at least that is what I propose.
             </p>
             <p>
-              I really fell in love with Nat&apos;s concept of &ldquo;a week is 2% of the
-              year&rdquo; and have been adopting this to measure my life.
+              I really fell in love with Nat&apos;s concept of &ldquo;a week is
+              2% of the year&rdquo; and have been adopting this to measure my
+              life.
             </p>
           </div>
 
@@ -126,9 +109,9 @@ export default function Home() {
           </h3>
           <div className="space-y-8 text-base leading-7 text-gray-600 dark:text-gray-300">
             <p>
-              You might wonder, &lsquo;Why not use existing apps in the market?&rsquo;
-              However, my research suggested that many existing applications
-              charge excessively for minimal utility.
+              You might wonder, &lsquo;Why not use existing apps in the
+              market?&rsquo; However, my research suggested that many existing
+              applications charge excessively for minimal utility.
             </p>
             <p>
               So, that is why I decided to build it myself and turns out it was
@@ -148,7 +131,8 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="mt-24 pb-12 text-center text-sm text-gray-500 dark:text-gray-400">
-          &copy; {new Date().getFullYear()} Year Progress App. All rights reserved.
+          &copy; {new Date().getFullYear()} Year Progress App. All rights
+          reserved.
         </footer>
       </main>
     </div>

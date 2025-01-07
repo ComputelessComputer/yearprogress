@@ -13,15 +13,22 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/assets/year.jpg",
-        width: 178,
-        height: 137,
+        width: 190,
+        height: 140,
         alt: "Year Progress App Screenshot",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: "/assets/year.jpg",
+    images: [
+      {
+        url: "/assets/year.jpg",
+        width: 190,
+        height: 140,
+        alt: "Year Progress App Screenshot",
+      },
+    ],
   },
 };
 
