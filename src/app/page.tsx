@@ -18,9 +18,9 @@ export default function Home() {
           <Image
             src="/assets/year.jpg"
             alt="Year Progress"
-            width={570}
-            height={420}
-            className="mx-auto rounded-lg shadow-lg dark:shadow-gray-700/30 w-full"
+            width={380}
+            height={280}
+            className="mx-auto mt-12 rounded-lg shadow-lg dark:shadow-gray-700/30"
             priority
           />
 
