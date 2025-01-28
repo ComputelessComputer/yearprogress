@@ -35,10 +35,6 @@ export interface Dictionary {
       description1: string;
       description2: string;
     };
-    whyIsItFree: {
-      title: string;
-      description: string;
-    };
   };
 }
 

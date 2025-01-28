@@ -22,25 +22,11 @@ export async function generateMetadata({
     openGraph: {
       title: home.title,
       description: home.description,
-      images: [
-        {
-          url: "/assets/year.jpg",
-          width: 190,
-          height: 140,
-          alt: "Year Progress App Screenshot",
-        },
-      ],
+      images: [`/opengraph-image-${lang}.jpg`],
     },
     twitter: {
       card: "summary_large_image",
-      images: [
-        {
-          url: "/assets/year.jpg",
-          width: 190,
-          height: 140,
-          alt: "Year Progress App Screenshot",
-        },
-      ],
+      images: [`/opengraph-image-${lang}.jpg`],
     },
   };
 }

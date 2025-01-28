@@ -1,4 +1,8 @@
-export default function PrivacyPolicy() {
+export async function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "ko" }];
+}
+
+export default async function PrivacyPolicy() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>

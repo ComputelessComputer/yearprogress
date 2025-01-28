@@ -31,10 +31,6 @@
       "title": "Why use this?",
       "description1": "You might wonder, 'Why not use existing apps in the market?' However, my research suggested that many existing applications charge excessively for minimal utility.",
       "description2": "So, that is why I decided to build it myself and turns out it was the right choice."
-    },
-    "whyIsItFree": {
-      "title": "Why is it free?",
-      "description": "I initially considered pricing it, but given my involvement in other businesses, I preferred not to deal with the hassle. Moreover, I wanted to contribute to enhancing productivity freely."
     }
   }
 }
