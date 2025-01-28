@@ -128,12 +128,6 @@ export default function Home() {
             wanted to contribute to enhancing productivity freely.
           </p>
         </div>
-
-        {/* Footer */}
-        <footer className="mt-24 pb-12 text-center text-sm text-gray-500 dark:text-gray-400">
-          &copy; {new Date().getFullYear()} Year Progress App. All rights
-          reserved.
-        </footer>
       </main>
     </div>
   );

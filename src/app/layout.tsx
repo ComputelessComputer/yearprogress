@@ -39,7 +39,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <footer className="mt-24 pb-12 text-center text-sm text-gray-500 dark:text-gray-400">
+          &copy; {new Date().getFullYear()} Year Progress App. All rights
+          reserved. •{" "}
+          <a href="/privacy" className="hover:underline">
+            Privacy Policy
+          </a>
+        </footer>
+      </body>
     </html>
   );
 }
