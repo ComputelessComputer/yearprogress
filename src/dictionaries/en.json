@@ -1,0 +1,40 @@
+{
+  "navigation": {
+    "home": "Home",
+    "privacy": "Privacy Policy"
+  },
+  "home": {
+    "title": "Year Progress App",
+    "description": "Track the passage of time with elegant progress bars right from your menu bar",
+    "currentProgress": "Current Progress",
+    "daysLeft": "Days Left"
+  },
+  "features": {
+    "simple": "Simple & Elegant",
+    "simpleDescription": "Clean, minimalist interface that shows you exactly what you need to know at a glance.",
+    "multipleTimeScales": "Multiple Time Scales",
+    "multipleTimeScalesDescription": "Track progress for the year, month, and day all in one place.",
+    "menuBarIntegration": "Menu Bar Integration",
+    "menuBarIntegrationDescription": "Always accessible from your menu bar, with keyboard shortcuts for quick access.",
+    "nativeMacOSApp": "Native macOS App",
+    "nativeMacOSAppDescription": "Built specifically for macOS, following platform design guidelines and best practices."
+  },
+  "background": {
+    "title": "Background",
+    "description1": "I was looking into ",
+    "natFriedmanLink": "Nat Friedman's homepage",
+    "description2": " about 5 months ago and read a really obvious yet astonishing statement: ",
+    "quote": "A week is 2% of the year",
+    "description3": "Everyone knows that time is precious. But it's really not that tangible when you're stuck in the absolute scale of a clock. Instead, using relative scales is far more effective for humans, at least that is what I propose.",
+    "description4": "I really fell in love with Nat's concept of \"a week is 2% of the year\" and have been adopting this to measure my life.",
+    "whyUseThis": {
+      "title": "Why use this?",
+      "description1": "You might wonder, 'Why not use existing apps in the market?' However, my research suggested that many existing applications charge excessively for minimal utility.",
+      "description2": "So, that is why I decided to build it myself and turns out it was the right choice."
+    },
+    "whyIsItFree": {
+      "title": "Why is it free?",
+      "description": "I initially considered pricing it, but given my involvement in other businesses, I preferred not to deal with the hassle. Moreover, I wanted to contribute to enhancing productivity freely."
+    }
+  }
+}

@@ -1,68 +1,73 @@
 import { DownloadButton } from "@/components/DownloadButton";
 import Image from "next/image";
 import Link from "next/link";
+import { getDictionary } from "@/dictionaries";
+import { Locale } from "@/middleware";
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  const { features, background, home } = dict;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
       <main className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        {/* Hero Section */}
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-            Year Progress App
+            {home.title}
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Track the passage of time with elegant progress bars right from your
-            menu bar
+            {home.description}
           </p>
           <Image
             src="/assets/year.jpg"
-            alt="Year Progress"
-            width={380}
-            height={280}
-            className="mx-auto mt-12 rounded-lg shadow-lg dark:shadow-gray-700/30"
-            priority
+            alt="Year Progress App Screenshot"
+            width={190}
+            height={140}
+            className="mx-auto mt-10 rounded-xl shadow-2xl"
           />
-
-          <DownloadButton className="mt-16" />
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <DownloadButton />
+          </div>
         </div>
 
         {/* Features Section */}
-        <div className="mt-24">
+        <div className="mx-auto mt-32 max-w-2xl">
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
             <div className="relative">
               <dt className="text-lg font-semibold leading-7 text-gray-900 dark:text-white">
-                Simple &amp; Elegant
+                {features.simple}
               </dt>
               <dd className="mt-2 text-base text-gray-600 dark:text-gray-300">
-                Clean, minimalist interface that shows you exactly what you need
-                to know at a glance.
+                {features.simpleDescription}
               </dd>
             </div>
             <div className="relative">
               <dt className="text-lg font-semibold leading-7 text-gray-900 dark:text-white">
-                Multiple Time Scales
+                {features.multipleTimeScales}
               </dt>
               <dd className="mt-2 text-base text-gray-600 dark:text-gray-300">
-                Track progress for the year, month, and day all in one place.
+                {features.multipleTimeScalesDescription}
               </dd>
             </div>
             <div className="relative">
               <dt className="text-lg font-semibold leading-7 text-gray-900 dark:text-white">
-                Menu Bar Integration
+                {features.menuBarIntegration}
               </dt>
               <dd className="mt-2 text-base text-gray-600 dark:text-gray-300">
-                Always accessible from your menu bar, with keyboard shortcuts
-                for quick access.
+                {features.menuBarIntegrationDescription}
               </dd>
             </div>
             <div className="relative">
               <dt className="text-lg font-semibold leading-7 text-gray-900 dark:text-white">
-                Native macOS App
+                {features.nativeMacOSApp}
               </dt>
               <dd className="mt-2 text-base text-gray-600 dark:text-gray-300">
-                Built specifically for macOS, following platform design
-                guidelines and best practices.
+                {features.nativeMacOSAppDescription}
               </dd>
             </div>
           </div>
@@ -71,61 +76,41 @@ export default function Home() {
         {/* Background Section */}
         <div className="mx-auto max-w-2xl mt-24">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl text-center">
-            Background
+            {background.title}
           </h2>
           <div className="mt-10 space-y-8 text-base leading-7 text-gray-600 dark:text-gray-300">
             <p>
-              I was looking into{" "}
+              {background.description1}
               <Link
                 href="https://nat.org"
                 target="_blank"
-                className="underline decoration-dotted"
+                className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
               >
-                Nat Friedman&apos;s homepage
-              </Link>{" "}
-              about 5 months ago and read a really obvious yet astonishing
-              statement:
+                {background.natFriedmanLink}
+              </Link>
+              {background.description2}
               <span className="font-semibold text-gray-900 dark:text-white">
-                {" "}
-                &ldquo;A week is 2% of the year&rdquo;
+                {background.quote}
               </span>
               .
             </p>
-            <p>
-              Everyone knows that time is precious. But it&apos;s really not
-              that tangible when you&apos;re stuck in the absolute scale of a
-              clock. Instead, using relative scales is far more effective for
-              humans, at least that is what I propose.
-            </p>
-            <p>
-              I really fell in love with Nat&apos;s concept of &ldquo;a week is
-              2% of the year&rdquo; and have been adopting this to measure my
-              life.
-            </p>
+            <p>{background.description3}</p>
+            <p>{background.description4}</p>
           </div>
 
           <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-16 mb-6">
-            Why use this?
+            {background.whyUseThis.title}
           </h3>
           <div className="space-y-8 text-base leading-7 text-gray-600 dark:text-gray-300">
-            <p>
-              You might wonder, &lsquo;Why not use existing apps in the
-              market?&rsquo; However, my research suggested that many existing
-              applications charge excessively for minimal utility.
-            </p>
-            <p>
-              So, that is why I decided to build it myself and turns out it was
-              the right choice. Most of all, it&apos;s free!
-            </p>
+            <p>{background.whyUseThis.description1}</p>
+            <p>{background.whyUseThis.description2}</p>
           </div>
 
           <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-16 mb-6">
-            Why is it free?
+            {background.whyIsItFree.title}
           </h3>
           <p className="text-base leading-7 text-gray-600 dark:text-gray-300">
-            I initially considered pricing it, but given my involvement in other
-            businesses, I preferred not to deal with the hassle. Moreover, I
-            wanted to contribute to enhancing productivity freely.
+            {background.whyIsItFree.description}
           </p>
         </div>
       </main>
