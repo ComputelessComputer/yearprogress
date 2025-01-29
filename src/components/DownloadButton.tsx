@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import Link from "next/link";
 import { PushableButton } from "./PushableButton";
 
 interface DownloadButtonProps {
@@ -8,11 +9,11 @@ interface DownloadButtonProps {
 
 export function DownloadButton({ className }: DownloadButtonProps) {
   return (
-    <PushableButton 
-      className={className} 
-      onClick={() => window.location.href = 'https://github.com/ComputelessComputer/YearProgressApp/releases/download/v1/YearProgressApp.dmg'}
+    <Link
+      href="https://apps.apple.com/app/year-progress-tracker/id6741092986"
+      target="_blank"
     >
-      Download for macOS
-    </PushableButton>
+      <PushableButton className={className}>Download for macOS</PushableButton>
+    </Link>
   );
 }
