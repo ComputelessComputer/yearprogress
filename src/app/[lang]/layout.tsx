@@ -50,6 +50,10 @@ export default async function RootLayout({
           reserved. •{" "}
           <Link href="/privacy" className="hover:underline">
             {navigation.privacy}
+          </Link>{" "}
+          •{" "}
+          <Link href="/terms" className="hover:underline">
+            {navigation.terms}
           </Link>
         </footer>
       </body>

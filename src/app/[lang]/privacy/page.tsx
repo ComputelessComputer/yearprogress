@@ -58,8 +58,15 @@ export default async function PrivacyPolicy() {
         <section>
           <h2 className="text-2xl font-semibold mb-3">Contact Us</h2>
           <p className="text-gray-700">
-            If you have any questions about this Privacy Policy, please contact
-            us through our GitHub repository.
+            If you have any questions about this Privacy Policy or need support, please contact
+            us at{" "}
+            <a
+              href="mailto:help@theyearprogress.app"
+              className="text-blue-600 hover:underline"
+            >
+              help@theyearprogress.app
+            </a>
+            .
           </p>
         </section>
 

@@ -5,6 +5,7 @@ export interface Dictionary {
   navigation: {
     home: string;
     privacy: string;
+    terms: string;
   };
   home: {
     title: string;

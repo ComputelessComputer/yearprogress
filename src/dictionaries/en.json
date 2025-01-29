@@ -1,7 +1,8 @@
 {
   "navigation": {
     "home": "Home",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
   },
   "home": {
     "title": "Year Progress App",

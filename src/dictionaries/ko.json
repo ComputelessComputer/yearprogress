@@ -1,7 +1,8 @@
 {
   "navigation": {
     "home": "홈",
-    "privacy": "개인정보 처리방침"
+    "privacy": "개인정보 처리방침",
+    "terms": "이용약관"
   },
   "home": {
     "title": "Year Progress App",
