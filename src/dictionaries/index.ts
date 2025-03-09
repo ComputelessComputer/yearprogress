@@ -33,8 +33,16 @@ export interface Dictionary {
     description4: string;
     whyUseThis: {
       title: string;
-      description1: string;
-      description2: string;
+      description: string;
+      intro: string;
+      whyItMatters: string;
+      benefits: {
+        seeTimeDifferently: string;
+        stayMotivated: string;
+        minimal: string;
+        betterThanExisting: string;
+      };
+      conclusion: string;
     };
   };
 }
